@@ -1,16 +1,16 @@
-import express, { Express, Request, Response } from "express";
+import * as dotenv from "dotenv";
+dotenv.config();
+
+import bodyParser from "body-parser";
+import express, { Express } from "express";
 
 const app: Express = express();
 
 const port = process.env.port || 8080;
 
-app.get("/", (req: Request, res: Response) => {
-    res.send("I'm alive");
-});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/noob", (req: Request, res: Response) => {
-    res.send("hello");
-});
+app.use("/player", require("./routes/player"));
 
-app.listen(port, () => console.log('tuyy'));
-
+app.listen(port);
