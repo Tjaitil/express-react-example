@@ -4,13 +4,18 @@ services:
         build:
             context: ./server
             dockerfile: Dockerfile
+        environment:
+            - MYSQLDB_USER=$MYSQLDB_USER
+            - MYSQLDB_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+            - MYSQLDB_DATABASE=$MYSQLDB_DATABASE
+            - MYSQLDB_LOCAL_PORT=$MYSQLDB_DOCKER_PORT
         volumes:
             - ./server/src:/app/src
         ports:
             - "8080:8080"
     db:
         image: mysql
-        env_file: ./server/.env
+        env_file: ./.env
         environment:
             - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
             - MYSQL_DATABASE=$MYSQLDB_DATABASE
