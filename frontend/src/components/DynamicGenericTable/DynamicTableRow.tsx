@@ -1,7 +1,7 @@
 import { isExcludedProperty } from "../../utilities/isExcludedProperty";
 import { Player } from "../../../../server/src/shared/types/Player";
 import { DynamicTableCell } from "./DynamicTableCell";
-import { ExcludedProperties } from "src/types/ExcludedPropertiesType";
+import { ExcludedProperties } from "../../types/ExcludedPropertiesType";
 import { TableColumnTemplateType } from "../../types/GenericTable/TableColumnTemplateType";
 
 interface DynamicTableRowProps<TItem extends { [key: string]: any }> {
