@@ -1,4 +1,11 @@
-
 @import "variables";
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.form_floating > label {
+  text-align: left;
+}
+
+.table-input {
+  max-width: 100%;
+}
