@@ -1,0 +1,5 @@
+textarea,
+input,
+select {
+  min-width: 200px;
+}
