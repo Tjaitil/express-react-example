@@ -5,14 +5,14 @@ const create = async (player: Player) => {
     return await pool.query("INSERT INTO players (summoner_name, role, team, country, age) VALUES(?, ?, ?, ?, ?)", [
         player.summoner_name,
         player.role,
-        player.age,
-        player.country,
         player.team,
+        player.country,
+        player.age,
     ]);
 };
 
 const get = async () => {
-    return await pool.query("SELECT * from players");
+    return await pool.query("SELECT id, summoner_name, role, age, country, team from players");
 };
 
 const find = async (summonerName: string) => {
