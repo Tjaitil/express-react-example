@@ -1,5 +1,5 @@
 import { isExcludedProperty } from "../../utilities/isExcludedProperty";
-import { Player } from "../../../../server/src/shared/types/Player";
+import { Player } from "../../types/Player";
 import { DynamicTableCell } from "./DynamicTableCell";
 import { ExcludedProperties } from "../../types/ExcludedPropertiesType";
 import { TableColumnTemplateType } from "../../types/GenericTable/TableColumnTemplateType";

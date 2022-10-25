@@ -1,5 +1,5 @@
-import { Player } from "./../../../server/src/shared/types/Player";
 import axios, { AxiosInstance } from "axios";
+import { Player } from "../types/Player";
 
 export class PlayerApi {
   private static axiosInstance: AxiosInstance;
@@ -7,7 +7,8 @@ export class PlayerApi {
   private static getAxios() {
     if (!this.axiosInstance) {
       this.axiosInstance = axios.create({
-        baseURL: "http://localhost:8080/player",
+        baseURL: "/api/player",
+        // baseURL: "http://localhost:8080/player",
       });
     }
 

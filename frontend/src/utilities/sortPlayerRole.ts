@@ -1,4 +1,4 @@
-import { Player } from "../../../server/src/shared/types/Player";
+import { Player } from "../types/Player";
 
 export const sortPlayerRole = (a: Player, b: Player) =>
   getPlayerRoleOrder(a["role"]) < getPlayerRoleOrder(b["role"]) ? -1 : 1;

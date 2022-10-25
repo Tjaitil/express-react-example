@@ -12,7 +12,7 @@ import { isExcludedProperty } from "../../utilities/isExcludedProperty";
 import { ActionTableCell } from "../DynamicGenericTable/ActionTableCell";
 import { DynamicFooterRow } from "../DynamicGenericTable/DynamicFooterRow";
 import { sortPlayerRole } from "../../utilities/sortPlayerRole";
-import { Player } from "../../../../server/src/shared/types/Player";
+import { Player } from "../../types/Player";
 
 type dataTarget = "setNewRow" | "setFocusedRow";
 
